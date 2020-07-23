@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Callback Hell!!</title>
+  </head>
+  <body>
+    <div class="hey">HEY👋</div>
+    <style>
+      body {
+        background-color: rgb(167, 0, 97);
+      }
+      .hey {
+        margin: 5rem;
+        background: white;
+        padding: 5rem;
+        width: 3rem;
+        transition: all 0.2s;
+      }
+
+      .hey.circle {
+        border-radius: 50%;
+        transform: rotate(180deg);
+      }
+
+      .hey.cean {
+        background-color: rgb(177, 240, 240);
+        color: white;
+      }
+
+      .hey.green {
+        background-color: rgb(14, 131, 96);
+        color: white;
+      }
+
+      .hey.fadeout {
+        opacity: 0;
+      }
+    </style>
+    <!-- <script>
+      const hey = document.querySelector('.hey');
+      hey.addEventListener('click', function(e) {
+        let el = e.currentTarget;
+        el.textContent = 'watch me!🧞‍♂️';
+
+        setTimeout(function () {
+          // 1. 2秒後に丸くする＆回転させる
+          el.classList.add('circle');
+          // 2. 0.5秒後に水色の背景を変える
+          setTimeout(function () {
+            el.classList.add('cean');
+            // 3. 0.25秒後に四角に戻す
+            setTimeout(function () {
+              el.classList.remove('circle');
+              // 4. 0.3秒後に背景色を緑にする
+              setTimeout(function () {
+                el.classList.remove('cean');
+                el.classList.add('green');
+                // 5. 0.5秒後にフェードアウトする
+                setTimeout(function () {
+                  el.classList.add('fadeout');
+                }, 500);
+              }, 300);
+            }, 250);
+          }, 500);
+        }, 2000);
+      });
+    </script> -->
+    <!-- 上記をコメントアウトし、JSファイルにPromiseでの書き換えを行いましょう -->
+    <script src="index.js"></script> 
+  </body>
+</html>
