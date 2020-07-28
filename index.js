@@ -6,47 +6,43 @@ const promiseHey = new Promise((resolve) => {
 });
 
 // 以下を.thenでつなぎましょう
+// 1. 2秒後に丸くする＆回転させる    
+// 2. 0.5秒後に水色の背景を変える
+// 3. 0.25秒後に四角に戻す
+// 4. 0.3秒後に背景色を緑にする
+// 5. 0.5秒後にフェードアウトする
 
 promiseHey
   .then((e) => {
     let el = e.currentTarget;
+    console.log(el);
     el.textContent = 'watch me!🧞‍♂️';
-  })
-// 1. 2秒後に丸くする＆回転させる
-  .then((e) => {
+
     setTimeout(() => {
-      let el = e.currentTarget;
+      console.log(el);
       el.classList.add('circle');
     }, 1200);
-  })
-// 2. 0.5秒後に水色の背景を変える
-  .then((e) => {
+
     setTimeout(() => {
-      let el = e.currentTarget;
+      console.log(el);
       el.classList.add('cean');
-    }, 500);
-  })
-// 3. 0.25秒後に四角に戻す
-  .then((e) => {
+    }, 1200+500);
+
     setTimeout(() => {
-      let el = e.currentTarget;
+      console.log(el);
       el.classList.remove('circle');
-    }, 250);
-  })
-// 4. 0.3秒後に背景色を緑にする
-  .then((e) => {
+    }, 1200+500+250);
+
     setTimeout(() => {
-      let el = e.currentTarget;
+      console.log(el);
       el.classList.remove('cean');
       el.classList.add('green');
-    }, 300);
-  })
-// 5. 0.5秒後にフェードアウトする
-  .then((e) => {
+    }, 1200+500+250+300);
+
     setTimeout(() => {
-      let el = e.currentTarget;
+      console.log(el);
       el.classList.add('fadeout');
-    }, 500);
+    }, 1200+500+250+300+500);  
   })
 
 // エラーのハンドリング処理は、.catchを使い、文字列Error!と表記 & 引数の値のアウトプットをconsole.log()で行います
