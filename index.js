@@ -26,23 +26,23 @@ promiseHey
     setTimeout(() => {
       console.log(el);
       el.classList.add('cean');
-    }, 1200+500);
+    }, 1700);
 
     setTimeout(() => {
       console.log(el);
       el.classList.remove('circle');
-    }, 1200+500+250);
+    }, 1950);
 
     setTimeout(() => {
       console.log(el);
       el.classList.remove('cean');
       el.classList.add('green');
-    }, 1200+500+250+300);
+    }, 2250);
 
     setTimeout(() => {
       console.log(el);
       el.classList.add('fadeout');
-    }, 1200+500+250+300+500);  
+    }, 2750);  
   })
 
 // エラーのハンドリング処理は、.catchを使い、文字列Error!と表記 & 引数の値のアウトプットをconsole.log()で行います
